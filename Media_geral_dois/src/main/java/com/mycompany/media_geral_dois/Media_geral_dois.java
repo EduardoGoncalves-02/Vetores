@@ -29,7 +29,7 @@ public class Media_geral_dois {
             soma = soma + notas[i];
         }
         float media = soma / n;
-        System.out.println("A média geral dos alunos: " + media);
+        JOptionPane.showMessageDialog(null,"A média geral dos alunos: " + media);
 
         String saida = "Relatório de alunos \n";
         for(int i = 0; i < n; i++){
