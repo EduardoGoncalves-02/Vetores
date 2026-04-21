@@ -66,16 +66,49 @@ public class Vetor_switch_case {
                         posicao = posicao + 1;
                         encontrado = true;
                         break;
-                    }else{
+                    } else {
                         posicao = posicao + 1;
                     }
-                    
+
                 }
-                if (encontrado == true){
+                if (encontrado == true) {
                     JOptionPane.showMessageDialog(null, "O valor " + existe + ", está na posição: " + posicao);
-                }else{
+                } else {
                     JOptionPane.showMessageDialog(null, "Valor não encontrado.");
                 }
+            }
+            case 'c': {
+                int ocorrencia = 0;
+                int existe = Integer.parseInt(JOptionPane.showInputDialog("Qual o valor a ser pesquisado? "));
+                for (int i = 0; i < n; i++) {
+                    if (existe == vetor[i]) {
+                        ocorrencia = ocorrencia + 1;
+                    }
+                }
+                if (ocorrencia > 0) {
+                    JOptionPane.showMessageDialog(null, "O valor: " + existe + ", ocorre " + ocorrencia + " vezes.");
+                } else {
+                    JOptionPane.showMessageDialog(null, "O valor: " + existe + ", NÃO apareceu no vetor.");
+                }
+
+            }
+            case 'd': {
+                int menor = 0;
+                for (int i = 1; i < n; i++) {
+                    if (vetor[menor] > vetor[i]) {
+                        menor = i;
+                    }
+                }
+                JOptionPane.showMessageDialog(null, "O menor vetor é: " + vetor[menor] + ", e sua posição é: " + (menor + 1));
+            }
+            case 'e': {
+                int maior = 0;
+                for (int i = 1; i < n; i++) {
+                    if (vetor[maior] < vetor[i]) {
+                        maior = i;
+                    }
+                }
+                JOptionPane.showMessageDialog(null, "O maior vetor é: " + vetor[maior] + ", e sua posição é: " + (maior + 1));
             }
         }
     }
