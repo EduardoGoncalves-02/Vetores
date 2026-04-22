@@ -131,7 +131,7 @@ public class Vetor_switch_case {
                 break;
             }
             case 'h': {
-                int soma = 0;
+                double soma = 0;
                 for (int i = 0; i < n; i++) {
                     if (vetor[i] > 0) {
                         soma = soma + vetor[i];
@@ -141,7 +141,7 @@ public class Vetor_switch_case {
                 break;
             }
             case 'i': {
-                int soma = 0;
+                double soma = 0;
                 for (int i = 0; i < n; i++) {
                     if (vetor[i] < 0) {
                         soma = soma + vetor[i];
@@ -151,7 +151,7 @@ public class Vetor_switch_case {
                 break;
             }
             case 'j': {
-                int soma = 0;
+                double soma = 0;
                 for (int i = 0; i < n; i++) {
                     if (vetor[i] % 2 == 0) {
                         soma = soma + vetor[i];
@@ -161,7 +161,7 @@ public class Vetor_switch_case {
                 break;
             }
             case 'k': {
-                int soma = 0;
+                double soma = 0;
                 for (int i = 0; i < n; i++) {
                     if (vetor[i] % 2 != 0) {
                         soma = soma + vetor[i];
@@ -171,13 +171,41 @@ public class Vetor_switch_case {
                 break;
             }
             case 'l':{
-            int soma = 0;
+            double soma = 0;
             for (int i = 0; i < n; i++){
                 soma = soma + vetor[i];
             }
             JOptionPane.showMessageDialog(null, "Soma de todos os valores: " + soma);
             break;
             }
+            case 'm':{
+            double soma = 0;
+            for (int i = 0; i < n; i++){
+                soma = soma + vetor[i];
+            }
+            JOptionPane.showMessageDialog(null, "Média de todos os valores: " + (soma/n));
+            break;
+            }
+            case 'n':{
+            double soma = 0;
+            for (int i = 0; i < n; i++){
+                soma = soma + vetor[i];
+            }
+            double media = soma/n;
+            int j = 0;
+            double maiorQueMedia[] = new double[100];
+            String texto = "";
+            for( int i = 0; i < n; i++){
+                if(vetor[i] > media){
+                    maiorQueMedia[j] = vetor[i];
+                    texto += maiorQueMedia[j] + " | ";
+                    j++;
+                }
+            }
+            JOptionPane.showMessageDialog(null,"Valores acima da média: " + texto + ".");
+            break;
+            }
+            
         }
     }
 }
