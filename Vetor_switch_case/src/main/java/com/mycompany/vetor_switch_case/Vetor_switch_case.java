@@ -76,6 +76,7 @@ public class Vetor_switch_case {
                 } else {
                     JOptionPane.showMessageDialog(null, "Valor não encontrado.");
                 }
+                break;
             }
             case 'c': {
                 int ocorrencia = 0;
@@ -90,7 +91,7 @@ public class Vetor_switch_case {
                 } else {
                     JOptionPane.showMessageDialog(null, "O valor: " + existe + ", NÃO apareceu no vetor.");
                 }
-
+                break;
             }
             case 'd': {
                 int menor = 0;
@@ -109,6 +110,73 @@ public class Vetor_switch_case {
                     }
                 }
                 JOptionPane.showMessageDialog(null, "O maior vetor é: " + vetor[maior] + ", e sua posição é: " + (maior + 1));
+                break;
+            }
+            case 'f': {
+                int central = n / 2;
+                if (n % 2 == 0) {
+                    central = (n - 1) / 2;
+                    JOptionPane.showMessageDialog(null, "O valor central do vetor é: " + vetor[central]);
+                } else {
+                    JOptionPane.showMessageDialog(null, "O valor central do vetor é: " + vetor[central]);
+                }
+                break;
+            }
+            case 'g': {
+                double multiplica = 1;
+                for (int i = 0; i < n; i++) {
+                    multiplica = multiplica * vetor[i];
+                }
+                JOptionPane.showMessageDialog(null, "Resultado do produto: " + multiplica);
+                break;
+            }
+            case 'h': {
+                int soma = 0;
+                for (int i = 0; i < n; i++) {
+                    if (vetor[i] > 0) {
+                        soma = soma + vetor[i];
+                    }
+                }
+                JOptionPane.showMessageDialog(null, "O valor somado dos números positivos: " + soma);
+                break;
+            }
+            case 'i': {
+                int soma = 0;
+                for (int i = 0; i < n; i++) {
+                    if (vetor[i] < 0) {
+                        soma = soma + vetor[i];
+                    }
+                }
+                JOptionPane.showMessageDialog(null, "O valor somado dos números negativos: " + soma);
+                break;
+            }
+            case 'j': {
+                int soma = 0;
+                for (int i = 0; i < n; i++) {
+                    if (vetor[i] % 2 == 0) {
+                        soma = soma + vetor[i];
+                    }
+                }
+                JOptionPane.showMessageDialog(null, "O valor somado dos números pares: " + soma);
+                break;
+            }
+            case 'k': {
+                int soma = 0;
+                for (int i = 0; i < n; i++) {
+                    if (vetor[i] % 2 != 0) {
+                        soma = soma + vetor[i];
+                    }
+                }
+                JOptionPane.showMessageDialog(null, "O valor somado dos números ímpares: " + soma);
+                break;
+            }
+            case 'l':{
+            int soma = 0;
+            for (int i = 0; i < n; i++){
+                soma = soma + vetor[i];
+            }
+            JOptionPane.showMessageDialog(null, "Soma de todos os valores: " + soma);
+            break;
             }
         }
     }
