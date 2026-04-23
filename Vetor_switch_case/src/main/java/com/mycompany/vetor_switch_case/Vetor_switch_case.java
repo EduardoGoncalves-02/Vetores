@@ -194,7 +194,7 @@ public class Vetor_switch_case {
             double media = soma/n;
             int j = 0;
             double maiorQueMedia[] = new double[100];
-            String texto = "";
+            String texto = "| ";
             for( int i = 0; i < n; i++){
                 if(vetor[i] > media){
                     maiorQueMedia[j] = vetor[i];
@@ -205,7 +205,30 @@ public class Vetor_switch_case {
             JOptionPane.showMessageDialog(null,"Valores acima da média: " + texto + ".");
             break;
             }
-            
+            case 'o':{
+                String texto = "| ";
+                for(int i = n - 1; i >= 0; i--){
+                    texto += vetor[i] + " | ";
+                }
+                JOptionPane.showMessageDialog(null, texto);
+            }
+            case 'p':{
+                for(int i = 0; i < n -1; i++){
+                    for(int j = 0; j < n -1 -i; j++){
+                        if(vetor [j] > vetor[j+1]){
+                            int aux = vetor[j];
+                            vetor[j] = vetor[j+1];
+                            vetor[j+1] = aux;
+                            
+                        }
+                    }
+                } 
+                String texto = "| ";
+                for(int i = 0; i < n; i++){
+                    texto += vetor[i] + " | ";
+                }
+                JOptionPane.showMessageDialog(null,texto);
+            }
         }
     }
 }
